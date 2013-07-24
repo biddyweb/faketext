@@ -1,0 +1,21 @@
+/**
+ * Copyright (c) 2013 Nguyen Huu Phuoc <phuoc@huuphuoc.me>
+ */
+
+$prefix: ft-;
+$footerHeight: 80px;
+
+a {
+  &:hover { text-decoration: none; }
+}
+
+// Sticky footer
+html, body { height: 100%; }
+#wrap { min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -#{$footerHeight} auto; }
+#push { height: $footerHeight; }
+footer { height: $footerHeight - 1;
+  .container { border-top: 1px solid #ccc; padding-top: 10px; }
+}
+
+// Main content
+#main { padding-top: 10px; }
