@@ -71,7 +71,7 @@
                     <fieldset>
                         <legend>Messages</legend>
                         <div class="row-fluid form-inline">
-                            <input type="text" ng-model="content" class="input-xlarge" />
+                            <textarea class="input-xlarge" ng-model="content"></textarea>
                             <select class="input-small" ng-model="from">
                                 <option value="sender">Sender</option>
                                 <option value="receiver">Receiver</option>
@@ -81,7 +81,7 @@
 
                         <ul class="ft-input-message form-inline">
                             <li ng-repeat="m in messages">
-                                <input type="text" class="input-xlarge" ng-model="m.content" />
+                                <textarea class="input-xlarge" ng-model="m.content"></textarea>
                                 <select class="input-small" ng-model="m.from">
                                     <option value="sender">Sender</option>
                                     <option value="receiver">Receiver</option>

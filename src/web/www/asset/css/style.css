@@ -26,6 +26,9 @@ footer {
 #main {
   padding-top: 10px; }
 
+.form-inline select, .form-inline a {
+  vertical-align: top; }
+
 .ft-preview {
   background-color: #dbe2ed;
   border: solid 1px #cbcccc;
