@@ -57,11 +57,11 @@
                                 <div>
                                     <select ng-model="data.hour" class="input-small" name="hour">
                                         <option value="0">Hour</option>
-                                        <option ng-repeat="i in DAY_HOURS" value="{{ i + 1 }}">{{ i + 1 }}</option>
+                                        <option ng-repeat="i in DAY_HOURS" value="{{ i }}">{{ i }}</option>
                                     </select>
                                     <select ng-model="data.minute" class="input-small" name="minute">
                                         <option value="0">Minute</option>
-                                        <option ng-repeat="i in DAY_MINUTES" value="{{ i + 1 }}">{{ i + 1 }}</option>
+                                        <option ng-repeat="i in DAY_MINUTES" value="{{ i }}">{{ i }}</option>
                                     </select>
                                 </div>
                             </div>
@@ -105,17 +105,17 @@
                     <div class="ft-preview">
                         <!-- preview/top: -->
                         <div class="row-fluid ft-preview-top">
-                            <div class="pull-left ft-operator">
+                            <div class="ft-operator">
                                 <img src="asset/img/iphone-top-signal.jpg" width="39" height="30" alt=""/>
-                                <span>{{ operator }} </span>
+                                <span>{{ data.operator }} </span>
                                 <img ng-src="asset/img/iphone-connection-{{ data.connection }}.jpg" width="26" height="30" alt=""/>
                             </div>
-                            <div class="pull-right ft-battery">
-                                <span>{{ batteryPercent }}%</span>
+                            <div class="ft-battery">
+                                <span>{{ data.batteryPercent }}%</span>
                                 <img src="asset/img/iphone-battery.jpg" width="41" height="30" alt=""/>
                             </div>
                             <div class="ft-time">
-                                {{ time }}
+                                {{ formatTime() }}
                             </div>
                         </div>
                         <!-- :preview/top -->
@@ -124,7 +124,7 @@
                         <div class="row-fluid ft-preview-header">
                             <div class="ft-btn-message">Messages</div>
                             <div class="ft-btn-edit">Edit</div>
-                            <h2>{{ receiver }}</h2>
+                            <h2>{{ data.receiver }}</h2>
                         </div>
                         <!-- :preview/header -->
 

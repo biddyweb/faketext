@@ -10,7 +10,7 @@ angular
             operator: 'Operator',
             hour: 0,
             minute: 0,
-            batteryPercent: '100%',
+            batteryPercent: '100',
             receiver: '',
             connection: 'none'
         };
@@ -45,6 +45,21 @@ angular
          */
         $scope.setConnectionType = function(connection) {
             $scope.data.connection = connection.toLowerCase();
+        };
+
+        /**
+         * Format the time
+         * @returns {string}
+         */
+        $scope.formatTime = function() {
+            var middleDayHour = $scope.data.hour > 12 ? $scope.data.hour - 12 : $scope.data.hour;
+            return [
+                middleDayHour < 10 ? ('0' + middleDayHour) : middleDayHour,
+                ':',
+                $scope.data.minute < 10 ? ('0' + $scope.data.minute) : $scope.data.minute,
+                ' ',
+                $scope.data.hour > 12 ? 'PM' : 'AM'
+            ].join('');
         };
 
         /**

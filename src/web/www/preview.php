@@ -45,7 +45,7 @@ $params['messages'] = isset($params['messages']) ? json_decode($params['messages
                     <img src="asset/img/iphone-battery.jpg" width="41" height="30" alt=""/>
                 </div>
                 <div class="ft-time">
-                    <?= ($params['12hHour'] < 10) ? ('0' . $params['12hHour']) : $params['12hHour']; ?>:<?= ($params['minute'] < 10) ? ('0' . $params['minute']) : $params['minute']; ?> <?= $params['hour'] > 12 ? 'AM' : 'PM'; ?>
+                    <?= ($params['12hHour'] < 10) ? ('0' . $params['12hHour']) : $params['12hHour']; ?>:<?= ($params['minute'] < 10) ? ('0' . $params['minute']) : $params['minute']; ?> <?= $params['hour'] > 12 ? 'PM' : 'AM'; ?>
                 </div>
             </div>
             <!-- :preview/top -->

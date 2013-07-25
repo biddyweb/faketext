@@ -49,12 +49,13 @@ footer {
 
 .ft-preview-top {
   background-image: url('../img/iphone-top.jpg');
+  position: relative;
   width: 100%;
   height: 29px;
-  .span4 {
-    margin-right: 0;
-  }
+
   .ft-operator {
+    position: absolute;
+    left: 0;
     img {
       vertical-align: top;
     }
@@ -74,10 +75,12 @@ footer {
     padding-top: 4px;
   }
   .ft-battery {
+    color: #303030;
+    font: bold 19px Helvetica, Arial, sans-serif;
+    position: absolute;
+    right: 0;
     text-align: right;
     text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
-    font: bold 19px Helvetica, Arial, sans-serif;
-    color: #303030;
   }
 }
 
@@ -87,9 +90,6 @@ footer {
   position: relative;
   width: 100%;
   height: 67px;
-  .span4 {
-    margin-right: 0;
-  }
 
   .ft-btn-message {
     background: url('../img/iphone-btn-message.jpg') no-repeat;
