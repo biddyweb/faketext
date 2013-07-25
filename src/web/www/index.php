@@ -89,9 +89,9 @@
                                         <option value="receiver">Receiver</option>
                                     </select>
                                     <span class="btn-group">
-                                        <a class="btn" ng-click="removeMessage($index)"><i class="icon-remove"></i></a>
-                                        <a class="btn" ng-click="moveUpMessage($index)" ng-class="{ 'disabled': $index == 0 }"><i class="icon-arrow-up"></i></a>
-                                        <a class="btn" ng-click="moveDownMessage($index)" ng-class="{ 'disabled': $index == messages.length - 1 }"><i class="icon-arrow-down"></i></a>
+                                        <a class="btn" ng-click="removeMessage($index)">Remove</a>
+                                        <a class="btn" ng-click="moveUpMessage($index)" ng-class="{ 'disabled': $index == 0 }">Up</a>
+                                        <a class="btn" ng-click="moveDownMessage($index)" ng-class="{ 'disabled': $index == messages.length - 1 }">Down</a>
                                     </span>
                                 </li>
                             </ul>
@@ -131,7 +131,7 @@
                         <div class="row-fluid ft-preview-header">
                             <div class="ft-btn-message">Messages</div>
                             <div class="ft-btn-edit">Edit</div>
-                            <h2>{{ data.receiver }}</h2>
+                            <h2>{{ formatReceiver() }}</h2>
                         </div>
                         <!-- :preview/header -->
 

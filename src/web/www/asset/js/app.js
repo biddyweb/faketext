@@ -62,6 +62,10 @@ angular
             ].join('');
         };
 
+        $scope.formatReceiver = function() {
+            return $scope.data.receiver.length < 15 ? $scope.data.receiver : ($scope.data.receiver.substr(0, 12) + '...')
+        };
+
         /**
          * Add new message to conversation
          */
