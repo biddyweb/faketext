@@ -26,6 +26,9 @@ footer {
 #main {
   padding-top: 10px; }
 
+.ft-share {
+  width: 50%; }
+
 .ft-preview {
   background-color: #dbe2ed;
   border: solid 1px #cbcccc;

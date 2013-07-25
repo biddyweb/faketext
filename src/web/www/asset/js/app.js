@@ -7,7 +7,7 @@ angular
     .module('FakeText', [])
     .controller('IndexController', function($rootScope, $scope, $http) {
         $scope.data = {
-            operator: 'Operator',
+            operator: '',
             hour: 0,
             minute: 0,
             batteryPercent: '100',

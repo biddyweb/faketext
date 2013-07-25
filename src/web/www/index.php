@@ -24,6 +24,17 @@
         <div class="container" id="main" ng-controller="IndexController" ng-init="init()">
             <div class="page-header">
                 <h1>Fake iPhone messages</h1>
+
+                <div class="ft-share">
+                    <!-- AddThis Button BEGIN -->
+                    <div class="addthis_toolbox addthis_default_style">
+                        <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+                        <a class="addthis_button_tweet"></a>
+                        <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+                        <a class="addthis_button_pinterest_pinit"></a>
+                    </div>
+                    <!-- AddThis Button END -->
+                </div>
             </div>
 
             <div class="row-fluid">
@@ -36,7 +47,7 @@
                         <div class="row-fluid">
                             <div class="span6">
                                 <label>Operator</label>
-                                <input type="text" placeholder="Operator" ng-model="data.operator" name="operator">
+                                <input type="text" placeholder="AT&T, Vinaphone, etc." ng-model="data.operator" name="operator">
                             </div>
                             <div class="span6">
                                 <label>Connection</label>
@@ -89,9 +100,9 @@
                                         <option value="receiver">Receiver</option>
                                     </select>
                                     <span class="btn-group">
-                                        <a class="btn" ng-click="removeMessage($index)">Remove</a>
-                                        <a class="btn" ng-click="moveUpMessage($index)" ng-class="{ 'disabled': $index == 0 }">Up</a>
-                                        <a class="btn" ng-click="moveDownMessage($index)" ng-class="{ 'disabled': $index == messages.length - 1 }">Down</a>
+                                        <a class="btn" ng-click="removeMessage($index)"><i class="icon-remove"></i></a>
+                                        <a class="btn" ng-click="moveUpMessage($index)" ng-class="{ 'disabled': $index == 0 }"><i class="icon-arrow-up"></i></a>
+                                        <a class="btn" ng-click="moveDownMessage($index)" ng-class="{ 'disabled': $index == messages.length - 1 }"><i class="icon-arrow-down"></i></a>
                                     </span>
                                 </li>
                             </ul>
@@ -171,5 +182,7 @@
         </div>
     </footer>
     <!-- :footer -->
+
+    <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script>
 </body>
 </html>
