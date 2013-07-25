@@ -86,6 +86,26 @@ angular
         };
 
         /**
+         * Move up the message
+         * @param $index Index of the message
+         */
+        $scope.moveUpMessage = function($index) {
+            if ($index > 0) {
+                $scope.swapMessage($index, $index - 1);
+            }
+        };
+
+        /**
+         * Move down the message
+         * @param $index Index of the message
+         */
+        $scope.moveDownMessage = function($index) {
+            if ($index < $scope.messages.length - 1) {
+                $scope.swapMessage($index, $index + 1);
+            }
+        };
+
+        /**
          * Download image
          */
         $scope.download = function(evt) {
@@ -117,5 +137,16 @@ angular
                 array.push(i);
             }
             return array;
+        };
+
+        /**
+         * Swap two messages
+         * @param i
+         * @param j
+         */
+        $scope.swapMessage = function(i, j) {
+            var tmp = $scope.messages[i];
+            $scope.messages[i] = $scope.messages[j];
+            $scope.messages[j] = tmp;
         };
     });

@@ -26,9 +26,6 @@ footer {
 #main {
   padding-top: 10px; }
 
-.form-inline select, .form-inline a {
-  vertical-align: top; }
-
 .ft-preview {
   background-color: #dbe2ed;
   border: solid 1px #cbcccc;
@@ -160,8 +157,12 @@ footer {
       left: 340px;
       bottom: 5px; }
 
-.ft-input-message {
+.ft-input-message ul {
   margin: 5px 0 0 0; }
-  .ft-input-message li {
-    list-style-type: none;
-    margin-bottom: 5px; }
+.ft-input-message li {
+  list-style-type: none;
+  margin-bottom: 5px; }
+.ft-input-message .form-inline select, .ft-input-message .form-inline a {
+  vertical-align: top; }
+.ft-input-message span.btn-group {
+  vertical-align: top; }

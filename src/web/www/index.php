@@ -70,25 +70,32 @@
 
                     <fieldset>
                         <legend>Messages</legend>
-                        <div class="row-fluid form-inline">
-                            <textarea class="input-xlarge" ng-model="content"></textarea>
-                            <select class="input-small" ng-model="from">
-                                <option value="sender">Sender</option>
-                                <option value="receiver">Receiver</option>
-                            </select>
-                            <a class="btn btn-success" ng-click="addMessage()">Add</a>
-                        </div>
 
-                        <ul class="ft-input-message form-inline">
-                            <li ng-repeat="m in messages">
-                                <textarea class="input-xlarge" ng-model="m.content"></textarea>
-                                <select class="input-small" ng-model="m.from">
+                        <div class="ft-input-message">
+                            <div class="row-fluid form-inline">
+                                <textarea class="input-xlarge" ng-model="content"></textarea>
+                                <select class="input-small" ng-model="from">
                                     <option value="sender">Sender</option>
                                     <option value="receiver">Receiver</option>
                                 </select>
-                                <a class="btn btn-success" ng-click="removeMessage($index)">Remove</a>
-                            </li>
-                        </ul>
+                                <a class="btn btn-success" ng-click="addMessage()">Add</a>
+                            </div>
+
+                            <ul class="form-inline">
+                                <li ng-repeat="m in messages">
+                                    <textarea class="input-xlarge" ng-model="m.content"></textarea>
+                                    <select class="input-small" ng-model="m.from">
+                                        <option value="sender">Sender</option>
+                                        <option value="receiver">Receiver</option>
+                                    </select>
+                                    <span class="btn-group">
+                                        <a class="btn" ng-click="removeMessage($index)"><i class="icon-remove"></i></a>
+                                        <a class="btn" ng-click="moveUpMessage($index)" ng-class="{ 'disabled': $index == 0 }"><i class="icon-arrow-up"></i></a>
+                                        <a class="btn" ng-click="moveDownMessage($index)" ng-class="{ 'disabled': $index == messages.length - 1 }"><i class="icon-arrow-down"></i></a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
                     </fieldset>
 
                     <div class="text-center" style="margin-top: 20px;">

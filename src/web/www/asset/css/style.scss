@@ -36,12 +36,6 @@ footer {
   padding-top: 10px;
 }
 
-.form-inline {
-  select, a {
-    vertical-align: top;
-  }
-}
-
 .ft-preview {
   background-color: #dbe2ed;
   border: solid 1px #cbcccc;
@@ -202,9 +196,20 @@ footer {
 }
 
 .ft-input-message {
-  margin: 5px 0 0 0;
+  ul {
+    margin: 5px 0 0 0;
+  }
   li {
     list-style-type: none;
     margin-bottom: 5px;
+  }
+
+  .form-inline {
+    select, a {
+      vertical-align: top;
+    }
+  }
+  span.btn-group {
+    vertical-align: top;
   }
 }
