@@ -1,5 +1,6 @@
 /**
- * Copyright (c) 2013 Nguyen Huu Phuoc <phuoc@huuphuoc.me>
+ * @author Nguyen Huu Phuoc <huuphuoc.me>
+ * @copyright (c) 2013 Nguyen Huu Phuoc
  */
 a:hover {
   text-decoration: none; }
@@ -24,3 +25,128 @@ footer {
 
 #main {
   padding-top: 10px; }
+
+.ft-preview {
+  background-color: #dbe2ed;
+  border: solid 1px #cbcccc;
+  border-radius: 1px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  width: 480px;
+  /*height: 720px;*/ }
+
+.ft-preview-top {
+  background-image: url("../img/iphone-top.jpg");
+  width: 100%;
+  height: 29px; }
+  .ft-preview-top .span4 {
+    margin-right: 0; }
+  .ft-preview-top .ft-operator img {
+    vertical-align: top; }
+  .ft-preview-top .ft-operator span {
+    text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+    font: bold 19px Helvetica, Arial, sans-serif;
+    color: #303030;
+    display: inline-block;
+    margin-top: 3px; }
+  .ft-preview-top .ft-time {
+    text-align: center;
+    text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+    font: bold 18px Helvetica, Arial, sans-serif;
+    color: #000;
+    padding-top: 4px; }
+  .ft-preview-top .ft-battery {
+    text-align: right;
+    text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+    font: bold 19px Helvetica, Arial, sans-serif;
+    color: #303030; }
+
+.ft-preview-header {
+  background-image: url("../img/iphone-header.jpg");
+  overflow: hidden;
+  width: 100%;
+  height: 67px; }
+  .ft-preview-header .span4 {
+    margin-right: 0; }
+  .ft-preview-header .ft-btn-message {
+    background: url("../img/iphone-btn-message.jpg") no-repeat;
+    color: #FFF;
+    font: bold 18px Helvetica, Arial, sans-serif;
+    margin: 10px 0 0 6px;
+    padding: 12px 4px;
+    text-align: center;
+    text-shadow: 0 -1px 0 #000;
+    width: 114px;
+    height: 46px; }
+  .ft-preview-header .ft-btn-edit {
+    background: url("../img/iphone-btn-edit.jpg") top right no-repeat;
+    font: bold 18px Helvetica, Arial, sans-serif;
+    color: #FFF;
+    margin-top: 10px;
+    padding: 12px 0;
+    text-align: center;
+    text-shadow: 0 -1px 0 #000;
+    width: 107px;
+    height: 46px; }
+  .ft-preview-header .ft-receiver {
+    text-align: center;
+    text-shadow: 0 -1px 0 #000;
+    color: #FFF;
+    padding-top: 5px;
+    font: bold 28px Helvetica, Arial, sans-serif;
+    /*margin-left: 8px;*/ }
+
+.ft-preview-footer {
+  background-image: url("../img/iphone-footer.jpg");
+  width: 100%;
+  height: 60px; }
+
+.ft-preview-message {
+  height: 564px;
+  overflow: auto; }
+  .ft-preview-message ul {
+    margin: 20px 10px;
+    overflow: hidden; }
+  .ft-preview-message li {
+    background-repeat: no-repeat;
+    color: #000;
+    font: 100 23px Helvetica, Arial, sans-serif;
+    list-style: none;
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0 0 0; }
+    .ft-preview-message li.ft-message-blue p {
+      background-image: url("../img/iphone-msg-blue.jpg");
+      margin: 0 0 0 120px;
+      padding: 10px 0 0 40px;
+      text-align: left;
+      text-shadow: -1px 0 #d3efff, 0 1px #d3efff, 1px 0 #d3efff, 0 -1px #d3efff; }
+    .ft-preview-message li.ft-message-blue div {
+      background-image: url("../img/iphone-msg-blue-bottom.jpg");
+      margin-left: 120px;
+      width: 330px;
+      height: 19px; }
+    .ft-preview-message li.ft-message-blue button {
+      position: absolute;
+      right: 330px;
+      bottom: 5px; }
+    .ft-preview-message li.ft-message-grey p {
+      background: url("../img/iphone-msg-grey.jpg") no-repeat;
+      margin: 0;
+      padding: 10px 0 0 30px;
+      text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff; }
+    .ft-preview-message li.ft-message-grey div {
+      background-image: url("../img/iphone-msg-grey-bottom.jpg");
+      width: 330px;
+      height: 19px; }
+    .ft-preview-message li.ft-message-grey button {
+      position: absolute;
+      left: 340px;
+      bottom: 5px; }
+
+.ft-input-message {
+  margin: 5px 0 0 0; }
+  .ft-input-message li {
+    list-style-type: none;
+    margin-bottom: 5px; }

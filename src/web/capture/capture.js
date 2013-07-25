@@ -65,8 +65,8 @@ var system   = require('system'),
 params = phpjs.base64_decode(params);
 params = phpjs.urldecode(params);
 
-//page.open(url, 'post', params, function(status) {
-page.open(url, function(status) {
+page.open(url, 'post', params, function(status) {
+//page.open(url, function(status) {
     var clipRect = page.evaluate(function(s) {
         try {
             return document.querySelector(s).getBoundingClientRect();

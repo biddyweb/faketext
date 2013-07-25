@@ -2,7 +2,6 @@
 /**
  * @author Nguyen Huu Phuoc <huuphuoc.me>
  */
-session_start();
 
 include_once __DIR__ . '/config/application.config.php';
 
@@ -14,30 +13,23 @@ $previewUrl = implode('', array(
     '/preview.php',
 ));
 
-$params = array(
-    'key' => SECRET_KEY,
-);
-
-$outputFile = dirname(__DIR__) . '/data/' . uniqid() . '.txt';
-//$outputFile = dirname(__DIR__) . '/data/' . session_id() . '.txt';
-$fp = fopen($outputFile, 'w+');
-fclose($fp);
-chmod($outputFile, 0777);
+$params = array_merge(array(
+    'key' => APP_SECRET_KEY,
+), $_POST);
 
 $command = implode(' ', array(
-    'phantomjs',
+    APP_PHANTOMJS_PATH,
     $captureJs,
     $previewUrl,
-    PREVIEW_ID,
+    APP_PREVIEW_ID,
     base64_encode(urlencode(http_build_query($params))),
-    '>',
-    $outputFile,
 ));
 
-echo $command;
+$output = exec($command . ' 2>&1');
 
-shell_exec($command);
-//$output = file_get_contents($outputFile);
-//echo json_encode(array(
-//    'output' => $output,
-//));
+// Force download png
+header('Content-Disposition: attachment;filename="faketext_' . uniqid() . '.png"');
+header('Content-Type: application/force-download');
+// header("Content-type: application/octet-stream");
+echo base64_decode($output);
+exit();
