@@ -102,7 +102,7 @@
 
                 <!-- preview: -->
                 <div class="span6">
-                    <div class="ft-preview hide">
+                    <div class="ft-preview">
                         <!-- preview/top: -->
                         <div class="row-fluid ft-preview-top">
                             <div class="pull-left ft-operator">
@@ -122,9 +122,9 @@
 
                         <!-- preview/header: -->
                         <div class="row-fluid ft-preview-header">
-                            <div class="span4 ft-btn-message">Messages</div>
-                            <div class="span4 ft-receiver"><h2>{{ receiver }}</h2></div>
-                            <div class="span4 pull-right ft-btn-edit">Edit</div>
+                            <div class="ft-btn-message">Messages</div>
+                            <div class="ft-btn-edit">Edit</div>
+                            <h2>{{ receiver }}</h2>
                         </div>
                         <!-- :preview/header -->
 

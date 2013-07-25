@@ -52,9 +52,9 @@ $params['messages'] = isset($params['messages']) ? json_decode($params['messages
 
             <!-- preview/header: -->
             <div class="row-fluid ft-preview-header">
-                <div class="span4 ft-btn-message">Messages</div>
-                <div class="span4 ft-receiver"><h2><?= $params['receiver']; ?></h2></div>
-                <div class="span4 pull-right ft-btn-edit">Edit</div>
+                <div class="ft-btn-message">Messages</div>
+                <div class="ft-btn-edit">Edit</div>
+                <h2><?= $params['receiver']; ?></h2>
             </div>
             <!-- :preview/header -->
 
