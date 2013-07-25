@@ -1,3 +1,36 @@
+# Installation guide
+
+The following instruction shows you how to install system on Centos 64 bit:
+
+*Install NodeJs*
+
+```bash
+$ sudo yum install npm
+```
+
+```bash
+$ which node
+    /usr/bin/node
+$ node -v
+    v0.10.12
+$ which npm
+    /usr/bin/npm
+$ npm -v
+    1.2.17
+
+*Install PhantomJs*
+
+```bash
+$ sudo npm install -g phantomjs
+```
+
+```bash
+$ which phantomjs
+    /usr/bin/phantomjs
+$ phantomjs -v
+    1.9.1
+```
+
 # Trouble shooting
 
 *env: node: No such file or directory issue*
