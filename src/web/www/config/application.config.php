@@ -13,4 +13,4 @@ define('APP_SECRET_KEY',     'WD4_Zm&jv2g~O_5bKw#AmB7Z1oX6Me!g5h5R"|E1t52!1Pm{>=
 define('APP_PREVIEW_ID',     'preview');
 
 // Path to PhantomJS
-define('APP_PHANTOMJS_PATH', 'dev' == APP_ENV ? '/opt/local/bin/phantomjs' : '');
+define('APP_PHANTOMJS_PATH', 'dev' == APP_ENV ? '/opt/local/bin/phantomjs' : '/usr/bin/phantomjs');
