@@ -121,7 +121,8 @@ footer {
   .ft-preview-message li {
     background-repeat: no-repeat;
     color: #000;
-    font: 100 23px Helvetica, Arial, sans-serif;
+    /*font: 100 23px Helvetica, Arial, sans-serif;*/
+    font: 100 23px;
     list-style: none;
     overflow: hidden;
     position: relative;
@@ -129,9 +130,11 @@ footer {
     .ft-preview-message li.ft-message-blue p {
       background-image: url("../img/iphone-msg-blue.jpg");
       margin: 0 0 0 120px;
-      padding: 10px 0 0 40px;
+      padding: 10px 30px 0 40px;
       text-align: left;
-      text-shadow: -1px 0 #d3efff, 0 1px #d3efff, 1px 0 #d3efff, 0 -1px #d3efff; }
+      text-shadow: -1px 0 #d3efff, 0 1px #d3efff, 1px 0 #d3efff, 0 -1px #d3efff;
+      word-wrap: break-word;
+      width: 280px; }
     .ft-preview-message li.ft-message-blue div {
       background-image: url("../img/iphone-msg-blue-bottom.jpg");
       margin-left: 120px;
@@ -144,8 +147,10 @@ footer {
     .ft-preview-message li.ft-message-grey p {
       background: url("../img/iphone-msg-grey.jpg") no-repeat;
       margin: 0;
-      padding: 10px 0 0 30px;
-      text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff; }
+      padding: 10px 30px 0 30px;
+      text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+      word-wrap: break-word;
+      width: 280px; }
     .ft-preview-message li.ft-message-grey div {
       background-image: url("../img/iphone-msg-grey-bottom.jpg");
       width: 330px;
